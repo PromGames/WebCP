@@ -1,0 +1,311 @@
+Controles
+En general, el control de Courseplay trabaja con el ratón, debido a las teclas libres en Simulador de la agricultura son más bien raras. Al utilizar el botón derecho del ratón el Courseplay hud, donde puede configurar los controladores, se activa. Además, un par de funciones como iniciar y detener la conducción están disponibles para el teclado, usando las teclas CTRL + PK 7 a través de CTRL + PK 9 . En el HUD puede cambiar la apertura / cierre del HUD para el uso del teclado ( default: CTRL + DELETE ).
+
+HUD
+Al abrir el HUD, los controles del ratón se activan automáticamente. Esto quiere decir que no se puede utilizar el ratón para mirar alrededor ya. Para desactivar los controles del ratón, debe hacer clic en el botón derecho del ratón de nuevo. Alternativamente, usted puede hacer clic en la X en la esquina superior derecha de la HUD. Si lo hace, se cierra el HUD y desactiva los controles del ratón.
+El HUD se divide en varias páginas. Usted puede navegar a través de los ya sea usando las flechas izquierda / derecha < / > en la sección superior del HUD, o haciendo clic directamente sobre el icono de la página correspondiente en la parte superior. Tenga en cuenta las ciertas páginas se desactivan mientras estás en un modo determinado.
+
+En la sección central en cada página, una multitud de configuraciones y opciones se puede configurar y dar órdenes, simplemente haciendo clic en la acción elegida o sus botones correspondientes ( + / - / < / > ) con el botón izquierdo del ratón . Ciertos valores y ajustes como desplazarse por la lista de cursos, los ajustes de ancho, velocidades oder porcentajes etc. pueden ser alterados en pasos más grandes pulsando la tecla CTRL mientras hace clic en la tecla en los botones.
+En la parte inferior de la hud encontrará información sobre el controlador, el curso cargado y el estado actual. También en esa sección, puede guardar el curso actual haciendo clic.
+
+ HUD: Controles del conductor
+Ningún curso cargado
+
+Inicie la grabación
+Con esta opción, se activa el modo de grabación de Courseplay. Puede conducir y registrar el supuesto de que el conductor debe usar más tarde. Al activar, tres huevos en un intervalo de ca. 10 a 20 m se mostrarán en la salida. Usted debe asegurarse de que ir más o menos recto hasta llegar al tercer huevo (tercera waypoint).
+Cuando la grabación está activa, puede desactivar los controles del ratón haciendo clic en los botones de un ratón, por lo que puede mirar a su alrededor mientras se conduce y la grabación.
+Grabación Pausa
+Durante la grabación se puede interrumpir la grabación con esta opción. Una flecha amarilla estará pantalla, que muestra la dirección hasta el último punto. Además, durante la pausa puede eliminar los últimos puntos de referencia, respectivamente.
+Detenga la grabación
+Esta opción sólo está disponible durante la grabación. Al llegar al punto final de la ruta, utilice "detener la grabación". Se recomienda tener el punto final ca. 5 a 10 m antes del punto de inicio, y para que tenga aproximadamente la misma dirección que el punto de inicio. Significado: no se detienen en una dirección sur, mientras que la dirección de inicio del curso es el norte.
+Punto de espera Ajuste
+Durante la grabación, usted tiene la posibilidad de establecer puntos de espera en el curso. En esos puntos, el conductor, durante la marcha del curso, se detendrá y esperará hasta que le dices a continuar, o haya transcurrido el tiempo de espera configurado. Cuando un conductor llega a un punto de espera, se mostrará un mensaje ( XYZ ha alcanzado el punto de espera. ).
+Set punto de cruce
+Los puntos de cruce son "señales" o de "puntos de combinación", donde dos cursos separados se pueden combinar (ver Manejo de los cursos ). En ambos cursos, dos puntos de cruce (uno en cada curso) que están más cerca entre sí que se determinan a 50 metros. El curso combinado conducirá hasta el punto de cruce del primer curso, ya partir de ahí ir el segundo curso de su respectivo punto de cruce.
+Los puntos de cruce diagrama
+Fig. 1: Combinación de dos cursos en sus puntos de cruce
+Nota: inicio de un curso y detener los puntos se ajustan automáticamente como puntos de cruce. Por lo tanto, no tienen que ser declarado como aquellos manualmente durante la grabación.
+Curso cargado, no conducir
+
+Curso de unidad
+Cuando haya grabado o cargado un curso, puede "contratar" un conductor para que lo conduzca el curso. A partir de este momento, usted no tendrá ningún control manual sobre el tractor.
+Cambiar el modo de
+Con el fin de ser capaz de hacer muchos tipos de trabajo diferentes, hay diferentes modos de conducción. El modo actual se mostrará en la sección inferior de la HUD. Al hacer clic en "modo de cambio", que se pueden recorrer los distintos modos.
+Alternativamente, puede utilizar los nueve botones en el lado derecho de la HUD. Tienen la ventaja de elegir el modo deseado directamente.
+Los diferentes modos se describen en detalle en el modos de conducción sección.
+Eliminar waypoints
+Cuando un curso se ha grabado o cargado, puede eliminar la selección actual curso. El curso guardado no se borrará de la partida guardada, sólo el conductor limpiará su curso actual.
+Iniciar curso en ...
+Disponible en todos los modos excepto "Llenar y pala vacía"
+Algunos cursos tienen relativamente muchos puntos de interés en un área pequeña, especialmente en el punto de partida (por ejemplo, genera cursos con punta). Aquí puede elegir si el conductor comienza el curso desde el waypoint (ajuste predeterminado) más cercana o directamente en el primer waypoint.
+Curso cargado, la conducción
+
+Detener controlador
+Por supuesto, siempre puede detener al conductor activado. Más tarde, cuando la reactivación del conductor, que continuará a partir del siguiente punto de referencia válido.
+continuar
+Cuando un conductor ha llegado a un punto de espera, puedes decirle manualmente para continuar.
+Marcadores de Ridge
+Disponible sólo en "la fertilización y siembra" de modo
+Al utilizar una sembradora con un curso generado, elegir wether los marcadores del canto deben desplegarse automáticamente o manualmente (es decir, que los controla).
+
+HUD: Salvar el curso
+En la sección inferior de la hud hay un icono del disco . Después de grabar un curso, puede guardarlo haciendo clic en el disco. En la parte superior de la pantalla de una entrada de texto se mostrará donde se puede nombrar el curso. Confirmar con ENTER (Intro).
+
+ HUD: Administrar cursos
+En esta página encontrará un resumen que contiene cursos guardados. La lista puede ser desplazado mediante las flechas arriba / abajo/ cerca del borde derecho del HUD.
+Cambio por defecto6 cursos
+CTRL cambio12 cursos
+Cada curso tiene tres opciones, respectivamente:
+ Cargar / Combinar
+Cargando el curso. Si ya hay un curso cargado, el curso se hace clic se combinará con la ya cargada en la primera común punto de cruce . En ambos cursos, dos puntos de cruce (uno en cada curso) que están más cerca entre sí que se determinan a 50 metros. El curso combinado conducirá hasta el punto de cruce del primer curso, ya partir de ahí ir el segundo curso de su respectivo punto de cruce.
+Los puntos de cruce diagrama
+Fig. 1: Combinación de dos platos en los pasos
+ Añadir
+Si ya se ha cargado un curso, se agregará el supuesto hecho clic al final del curso ya cargado.
+ Borrar
+El curso será borrado completamente del Courseplay y la partida guardada. No va a ser lo habrá mas, ni siquiera cuando se carga el juego de nuevo.
+HUD: Administrar cursos
+En esta página encontrará un resumen que contiene cursos guardados. La lista puede ser desplazado mediante las flechas arriba / abajo/ cerca del borde derecho del HUD.
+Cambio por defecto6 cursos
+CTRL cambio12 cursos
+Cada curso tiene tres opciones, respectivamente:
+ Cargar / Combinar
+Cargando el curso. Si ya hay un curso cargado, el curso se hace clic se combinará con la ya cargada en la primera común punto de cruce . En ambos cursos, dos puntos de cruce (uno en cada curso) que están más cerca entre sí que se determinan a 50 metros. El curso combinado conducirá hasta el punto de cruce del primer curso, ya partir de ahí ir el segundo curso de su respectivo punto de cruce.
+Los puntos de cruce diagrama
+Fig. 1: Combinación de dos platos en los pasos
+ Añadir
+Si ya se ha cargado un curso, se agregará el supuesto hecho clic al final del curso ya cargado.
+ Borrar
+
+El curso será borrado completamente del Courseplay y la partida guardada. No va a ser lo habrá mas, ni siquiera cuando se carga el juego de nuevo.
+Con el fin de grabar o cargar un nuevo curso, el curso actual se debe borrar. Ver Controles del conductor > "Eliminar waypoints".
+
+ Ajustes del modo Combi HUD
+Esta página se visualiza en todos los modos excepto en "Transfer", "trabajo de campo" y "Rellenar y pala vacía".
+Al igual que el nombre lo indica, estos ajustes son para los modos de combi y sobrecarga. Puede configurar el controlador para ser más adecuado para descargar la cosechadora. Los valores pueden ser cambiados haciendo clic en el + / - botones en el lado derecho (pasos más grandes con presionado CTRL clave).
+Desplazamiento lateral
+Este valor define el desplazamiento entre el conductor y la cosechadora / chopper durante la descarga horizontal. Técnicamente, es la distancia entre el centro de la cosechadora y su extremo de la tubería. Por defecto está ajustado en "auto" - el controlador calcula la distancia lateral de forma automática. El valor se puede cambiar y definida en "manual" pulsando + / - . Usted puede restablecerla a "automático" estableciéndola en 0 (cero).
+Cambio por defecto0,1 m
+CTRL cambio0,5 m
+Desplazamiento Pipe
+Este valor define el desplazamiento entre el remolque del conductor y la cosechadora / chopper durante la descarga (delante / detrás) vertical. Esto está siendo utilizado para tener el remolque directamente debajo de la tubería. Por defecto está ajustado en "auto". En contraste con el desplazamiento lateral o el radio de giro, al hacer clic + / - se suma a / resta del valor automático. Significado: por ejemplo, "1 m por delante", "2.5 m espalda", .... Usted puede restablecerla a "automático" estableciéndola en 0 (cero).
+Cambio por defecto0,1 m
+CTRL cambio0,5 m
+Diámetro de giro
+Este valor define radio de giro del tractor de conducción, que se utiliza especialmente para las maniobras de giro al descargar una cosechadora o helicóptero. El valor, como compensar el lado, se calcula automáticamente (basado en ángulo de la rueda, distancia entre ejes, anchura de pista, el número de remolques), tan pronto como se contrató a un conductor. Se puede cambiar y definida en "manual" pulsando + / - . Usted puede restablecerla a "automático" estableciéndola en 0 (cero).
+Cambio por defecto1 m
+CTRL cambio5 m
+Comience en%
+Este valor define la cosechadora a llenar porcentaje de nivel que indica al conductor a conducir hacia y descargarlo. Al descargar choppers, este valor define cuando el segundo piloto de descarga debe unirse a la cadena de descarga.
+Nota: si hallazgo ruta se activa, este valor se ignora el tiempo que la cosechadora de la tubería está en el lado de las frutas y la cosechadora no está lleno.
+Cambio por defecto5%
+CTRL cambio10%
+Conduzca por en%
+Este valor define en qué porcentaje el nivel de llenado del remolque el conductor debe comenzar a conducir el curso hasta el punto de descarga. Esto puede ser útil si, por ejemplo, el remolque del 97% y el conductor no debe esperar 5 minutos más para la próxima descarga, sólo para obtener un mísero 3%.
+Cambio por defecto5%
+CTRL cambio10%
+
+HUD: Administrar cosechadoras
+Esta página sólo se muestra en los modos "combinar" "Overloader".
+Estos ajustes sólo son relevantes para los modos de combinar y Overloader. Usted puede elegir entre el conductor en busca de una (la configuración predeterminada) se combinan en necesidad de forma automática, o tiene una asignada, no cambiar combinan (manual). Si el controlador se ha asignado manualmente a una cosechadora, que no tiene que estar en el mismo campo que la cosechadora con el fin de encontrarlo. Las unidades de conductor desde su punto de inicio en el se combinan, no importa dónde se encuentra.
+Esto puede ser útil para campos grandes y montañosas, donde la asignación automática no siempre funciona. O para las áreas que no son campos, como prados.
+
+HUD: plazos de envío
+Aquí puede establecer qué tan rápido debe conducir su conductor. Además, se puede elegir si un curso se debe conducir con la velocidad que se utiliza durante la grabación o la velocidad máxima.
+Cambio de velocidad: desde la grabación y la velocidad: la velocidad máxima determina si la velocidad utilizada durante la grabación o la velocidad máxima fijada debe ser utilizado.
+ESLimiter versión 3.0 o superior es compatible.
+Cambio por defecto1 kph / 0,6 mph
+CTRL cambio5 kph / 3,1 mph
+HUD: Configuración general
+Encontrar camino
+Si se activa hallazgo camino (sólo en los modos de combi y sobrecarga), el conductor trata de la mejor manera posible para no conducir a través de la fruta.
+Por un lado, esto significa que en el camino hacia el helicóptero combinar / conduce alrededor de la fruta. Por otra parte significa que no va a conducir a descargar una cosechadora si la cosechadora de tubería está en el tubo de fruta. El conductor sólo se iniciará cuando el tubo está en el lado no sean de fruta, o la cosechadora está 100% completo (ignorando el inicio en% de ajuste).
+Abrir Courseplay
+Usted puede elegir si se debe abrir el HUD cuando se hace clic en el botón derecho del ratón, o si las teclas del teclado deben utilizarse en lugar (por defecto: CTRL + DELETE ).
+Mostrar puntos de interés
+Elija qué waypoints curso debe mostrarse.
+Luces de faro
+Elija si y cuando las luces de baliza deben activarse.
+Depurar Nivel
+Si hay cualquier problema con Courseplay, puede establecer el nivel de depuración para limitar la profundidad de la información de error que aparece en el registro. Esta información es importante para los desarrolladores, para que puedan encontrar y corregir errores.
+HUD: Drive y configuración de trabajo
+El tiempo de espera
+De forma predeterminada, los conductores se detienen y esperan a la espera puntos (excepto para el trabajo de campo y los modos de fertilización / siembra), hasta que el conductor se le dice de forma explícita para continuar (el tiempo de espera = 0 seg). Cuando un tiempo de espera se ha establecido (por encima de 0 segundos), el conductor espera en el punto de espera hasta que el tiempo conjunto ha pasado y luego continúa de forma automática. Esto puede ser útil para, por ejemplo, una estación de peso a un BGA.
+Cambio por defecto5 sec
+CTRL cambio10 sec
+desplazamiento horizontal
+Sólo para el trabajo de campo y los modos de fertilización / siembra. Para algunas herramientas que podría ser de importación no conducir el curso exactamente en la línea central, pero ligeramente hacia la derecha o hacia la izquierda (por ejemplo pacas coleccionistas). Este desplazamiento se puede configurar aquí.
+Cambio por defecto0,5 m
+CTRL cambio1 m
+desviación vertical
+Sólo para el trabajo de campo y los modos de fertilización / siembra. Idéntica a la distancia al eje horizontal, sólo que los controladores de controlador más adelante / atrás el curso real.
+Cambio por defecto0,5 m
+CTRL cambio1 m
+Copiar curso
+Le permite copiar el curso y waypoints exacta de otro vehículo. También funciona con cursos combinados, generados o que no haya guardado.
+Primero elige el vehículo cuyo curso que desea copiar y pulse el [copia] botón. El curso y waypoints actual serán reemplazados por completo.
+HUD: generación de golf
+Esta página sólo se muestra en los modos de "trabajo de campo" "Fertilizantes y siembra" y.
+Para el uso general, consulte la generación supuesto página.
+Ancho de Trabajo
+Ancho de trabajo de la herramienta se puede configurar aquí, de la que se calcula el ancho de carril del curso.
+Cambio por defecto0,1 m (por encima de 10 m: 0,5 m)
+CTRL cambio0,5 m (por encima de 10 m: 2 m)
+A partir esquina
+Le permite elegir la esquina del jardín desde donde se iniciará el curso.
+Inicial para el sentido
+Permite elegir la dirección en la que el primer carril irá desde la esquina de partida. Las opciones dependen de la esquina inicial.
+Vuelta al primer punto
+Elija wether el conductor debe conducir de vuelta a la primera (inicio) punto cuando la herramienta está llena (el modo de trabajo de campo) / (modo de fertilizante / siembra) vacía.
+Promontorio
+Establecer wether el curso debe tener un carril de cabecera (fila vuelta) ( Wikipedia ), y wether debe ser antes (por ejemplo, con una cosechadora) o después (por ejemplo, con una sembradora).
+Generar curso
+Por último, generar el curso con los ajustes anteriores. Los requisitos son:
+un curso con un mínimo de 5 puntos de ruta se debe cargar (cuando se activa promontorio, el curso tiene que tener al menos 20 puntos de ruta )
+el curso cargado no se ha generado
+el curso cargado no se ha combinado de múltiples cursos
+un rincón de partida se ha establecido
+una dirección de partida se ha establecido
+HUD: posiciones pala
+Esta página sólo se muestra en el relleno y la pala vacía modo.
+Coloque el brazo, pala y capturador de su agrado, a continuación, haga clic en el botón correspondiente.
+Pro consejo: Recomendamos que no levanta / baja / abierto etc. la pala y capturador de sus rotaciones máximas - de lo contrario, podrían atascarse durante la conducción del curso.
+Estas posiciones no tienen que ajustarse durante la grabación. También no indicar cuando la pala debe tener la posición de ajuste. Ellos se pueden sobrescribir en cualquier momento dado. Ellos no se guardarán al salir del juego.
+
+Cargando posición
+La posición del brazo, pala y capturador durante la carga.
+Pala en posición de carga
+Fig. 1: Pala en posición de carga habitual
+Posición de transporte
+La posición del brazo, pala y capturador durante el transporte.
+Pala en posición de transporte
+Fig. 2: Pala en posición de transporte habitual
+Posición Pre-descarga
+La posición del brazo, pala y capturador de antes de la descarga. Esta posición se utiliza por lo que la pala no se cuelga en un remolque de espera.
+Pala en posición de pre-carga
+Fig. 3: Pala en la posición habitual de precarga
+Posición de descarga
+La posición del brazo, pala y capturador durante la descarga.
+Pala en posición de descarga
+Fig. 4: Pala en la posición habitual de descarga
+Deje de ir + carga
+Si está activado, el conductor se detendrá cuando se está llenando la pala. El conductor se moverá hacia adelante cuando no se llena nunca más hasta que se llena de nuevo, repitiendo hasta que esté lleno.
+Si no se activa, el conductor conducir a través del silo, se llena mientras se mueve (ajuste predeterminado).
+
+HUD: Combine controles
+Esta página sólo se muestra para cosechadoras y picadoras.
+Solicite controlador / controlador solicitó
+Llame a un controlador manualmente. Si un conductor ha encontrado la cosechadora y se encuentra en su camino, se mostrará su nombre.
+Iniciar / detener conductor
+Iniciar o detener el controlador actual manualmente. Si está parado, el conductor esperará hasta ser llamado para empezar de nuevo.
+Envíe a casa conductor
+Enviar manualmente el controlador actual para seguir su curso. Se impulsará el curso, descarga / sobrecarga, y conducir a su primer waypoint.
+Lado del conductor
+Sólo se muestra para helicópteros.
+De forma predeterminada, los conductores eligen el lado de ajuste (no fruta) para conducir por y descarga de un helicóptero. Con esta opción se puede codificar un lado de su elección donde deben conducir (por ejemplo, cuando se está trillando un campo manualmente en forma de espiral).
+Maniobra de giro
+Sólo muestran para helicópteros, sólo cuando están en modo manual (es decir, no en el ayudante o el modo de trabajo de campo).
+Decirle manualmente el controlador actual que está ahora comenzando su maniobra de giro. El conductor conducir fuera de su camino y gire también. Al hacer clic de nuevo le dice al conductor que ahora puede volver y continuar la descarga del helicóptero.
+
+Modos de conducción
+Hay ocho modos diferentes de conducción:
+ Ayudante de Conducir
+El tractor espera en el primer punto hasta su remolque se ha llenado. Esto puede ocurrir en un silo, en un borde del campo o en cualquier otro lugar. Tan pronto como el nivel de llenado alcanza el porcentaje establecido ( Unidad en en% ), el conductor empieza a conducir el curso. Tan pronto como se llega a un gatillo de descarga, que descarga automáticamente. Después se sigue el curso para volver a la primera etapa.
+El último punto de ruta debe ser de 5 a 10 m por delante de la primera, y tienen algo la misma dirección que la primera.
+Diagrama de Conductor
+Fig. 1: Punto de inicio, waypoints y puntos finales en el modo de ayudante conducción
+ Combi
+El modo combi es muy similar a la ayudante de conducción modo, en que el tractor impulsa un curso y a una descarga del gatillo. Pero, además, el conductor descarga un trabajo combinar o chopper en el campo.
+El tractor espera en el último punto de control hasta que tenga un / chopper combinar en su alcance, y dijo que se combinan a llenar el nivel está por encima del porcentaje ( Start en% ) establecido para el tractor. Entonces, el conductor conduzca a la cosechadora, viene desde atrás, y las unidades por debajo de la tubería, donde las aperturas combinar para descargar en el remolque del tractor. Si el remolque no está aún completo ( Unidad en en% ), el tractor se da la vuelta y espera en el campo para su próxima operación de descarga. Tan pronto como el nivel de llenado del remolque está por encima de la unidad en en% porcentaje, el conductor conducir a segundo waypoint del curso, y desde allí continuar el curso, descargar el remolque y regresar al campo.
+El tractor tiene dos posibilidades para tener una cosechadora de alcance:
+Primero y último punto del curso están en el campo en el que la cosechadora está trabajando. Sobre todo, el conductor identifica la cosechadora de forma automática (si el campo no es demasiado grande o demasiado montañoso). El conductor también identifica varias cosechadoras y asigna a sí mismo a la cosechadora que se ajusta mejor para él (en base a la distancia y la cosechadora de nivel de llenado).
+El tractor se asigna a uno distinto combinar (ver HUD: gestionar las cosechadoras ). Sólo el seleccionado combinan será la descarga, no hay otro. En este modo, no importa si el tractor y la cosechadora están en el mismo campo. La cosechadora puede esperar fuera del campo y todavía conducir a / de la cosechadora.
+ Overloader
+El modo de sobrecarga es algo similar al modo combinado, en que el conductor descarga una cosechadora. Pero en lugar de la conducción de un curso para un disparador de descarga, el controlador de sobrecarga en un remolque de espera. Como con el modo combi, una cosechadora se puede encontrar de forma automática o ajustar manualmente.
+Punto de inicio del curso debe estar en la proximidad de un remolque de espera (por ejemplo, otro tractor en el modo de "ayudante conductor"). A partir de ahí, el curso debe llevar a la caravana. Cuando la pipa de la Overloader está por encima del remolque en espera (por lo que cuando es capaz de sobrecarga), un punto de espera se debe establecer. Más tarde, mientras conduce el supuesto, este punto de espera cuenta la Overloader para detener, extender la tubería, y empezar a sobrecarga. Durante un mensaje de información punto de sobrecarga XYZ ha llegado. Se mostrará. Cuando el Overloader está vacía, el conductor seguirá el curso y esperar en el último punto de control para su próxima operación de descarga.
+Después de que el punto de espera, el curso necesita ampliar un poco más lejos (lejos del remolque), idealmente de vuelta al punto de inicio.
+Diagrama de Sobrecarga
+Fig. 2: Punto de inicio, puntos de interés, a la espera / punto sobrecarga y punto de parada en el modo de sobrecarga
+ Fertilizar y siembra
+Cuando la fertilización o siembra, hay dos secciones: una, la pieza de trabajo real en el campo, y dos, el curso desde el campo hasta el gatillo de recarga y de vuelta al campo.
+El curso de trabajo de campo se puede crear de dos formas diferentes:
+Usted registra el curso mismo. Es importante que es necesario que existan dos puntos de espera. El primero en la posición en el trabajo en el campo debe comenzar, y el segundo en la posición en el trabajo en el campo debe terminar. Esta área de trabajo es absolutamente necesario para el correcto funcionamiento de este modo.
+El curso se puede generar de forma automática. Para más información, consulte el curso Generar sección. Los puntos de espera se ajustarán automáticamente.
+La segunda parte, la recarga automática, es una "A a B" curso regular. Se debe comenzar en el segundo punto de espera (así, el final del curso trabajo de campo), y luego ir a través del estiércol fertilizante / líquido / siembra gatillo, y de nuevo al campo, que termina justo antes del primer punto del curso de trabajo de campo de espera . Tan pronto como se reconoce un disparador de recarga, el conductor se detiene y repone automáticamente. Si una herramienta no se puede rellenar por medio de un gatillo, sino más bien de forma manual (por ejemplo, un esparcidor de estiércol sólido o por medio de una transferencia remolque estiércol líquido), un punto de espera adicional tiene que ser establecido y el punto en que la herramienta debe ser llenado.
+Cuando se conduce a través de un disparo, el conductor le esperará hasta que la herramienta se llena al 100% y luego continuar su curso. Cuando no se conduce a través de un disparador, sino mediante un punto de espera, el conductor esperará hasta que el nivel de llenado de la herramienta ha alcanzado el set de inicio en% de porcentaje.
+Fertilización / diagrama de Siembra
+Fig. 3: Punto de inicio, waypoints, puntos de espera y punto de parada en el fertilizante / modo de siembra
+Tan pronto como la herramienta está vacía, entra en el modo de transporte y el conductor sigue el curso de rellenado. De vuelta en el campo, el conductor conduzca hasta el punto en el campo donde se detuvo el trabajo pasado, establece la herramienta en modo de trabajo, y sigue trabajando.
+ Transferencia
+El modo de transferencia es la más sencilla forma para ir de A a B. Utiliza un curso totalmente regular con un inicio y un punto final. El conductor sigue ciegamente que por supuesto, y sin descargar u otra materia de lujo. Al llegar al final, el conductor vuelve al punto de inicio y repite el curso. Si desea evitar que, debes activar la parada en el último punto o al siguiente disparo opción.
+ El trabajo de campo
+El modo de trabajo de campo es el caballo de batalla de todos los diferentes modos: puede ser utilizado para el prensado de pacas, recogida de pacas, acordonado, teddering, cultivar y mucho más.
+Básicamente, funciona de la misma como el modo de fertilizante / siembra, sólo que la herramienta necesita ser vaciada / descargados en lugar de ser rellenado. Además, el área de trabajo debe estar definido entre dos puntos de espera; el curso de descarga tiene que ir a través de una aplicación correspondiente.
+Como en el modo de fertilizante / siembra, el curso del trabajo de campo se puede generar de dos maneras:
+Usted registra el curso mismo. Es importante que es necesario que existan dos puntos de espera. El primero en la posición en el trabajo en el campo debe comenzar, y el segundo en la posición en el trabajo en el campo debe terminar. Esta área de trabajo es absolutamente necesario para el correcto funcionamiento de este modo.
+El curso se puede generar de forma automática. Para más información, consulte el curso Generar sección. Los puntos de espera se ajustarán automáticamente.
+Diagrama de trabajo de campo
+Fig. 4: Punto de inicio, waypoints, puntos de espera y punto de parada en el modo de trabajo de campo
+Herramientas serán de (des) dobla y (de) activa automáticamente. Los conductores con empacadoras como herramientas se detendrán y descargar los fardos de forma automática.
+ Combine autodescarga
+Este modo funciona de manera similar al modo de sobrecarga. El curso debe tener un punto de espera en la posición de sobrecarga, donde la cosechadora se detendrá, extienda la tubería, y descargar.
+Diagrama de Sobrecarga
+Fig. 5: Punto de inicio, puntos de interés, a la espera / punto sobrecarga y punto de parada en el modo de combinar la descarga auto
+Las necesidades se combinan para ser contratados como ayudante regular, y sólo entonces Courseplay pueden activarse. El combinar trabajará como ayudante hasta que su nivel de llenado alcanza el porcentaje fijado en Start en% . Luego se lleva a punto de inicio del curso, sigue el curso hasta el punto de espera, donde se descargará en un remolque de espera. Después, seguirá el curso hasta el punto final, desde donde se dirigirá a la última posición en la que trabajó como ayudante. Ahora, se activará su cortador y continuar la trilla.
+ Transportador de estiércol líquido
+El modo de transporte de estiércol líquido es para contenedores de campo y herramientas similares que tienen un disparador de llenado de estiércol líquido integrado. La herramienta se vuelve a llenar en un silo de estiércol líquido y luego conducido al borde de un campo, donde el barril de estiércol líquido de trabajo se puede rellenar de forma automática.
+Básicamente, no importa en que el curso comienza o termina, sólo asegúrese de dos cosas:
+El curso debe conducir a través de un disparador de estiércol líquido (por ejemplo, silo de estiércol líquido) para que pueda ser rellenado de forma automática.
+En la posición en la que el barril de estiércol líquido debe rellenar (de ahí el transportista debe parar), es necesario que haya un punto de espera.
+Diagrama de transporte de purín
+Fig. 6: Punto de inicio, waypoints, puntos de espera y punto de parada en el modo de transporte de estiércol líquido.
+El conductor continuará desde el de espera / punto sobrecarga tan pronto como la herramienta está vacía.
+ Llenar y pala vacía
+Este modo le permite llenar una pala en un área designada (por ejemplo, un silo BGA) y descargarlo en un bunker o remolque.
+La configuración de golf tiene que ser como sigue:
+Llenar y diagrama pala vacía
+Fig. 7: Todos los puntos y direcciones en el relleno y el modo de pala vacía.
+Iniciar delante del silo, y conducir hacia delante.
+En el punto donde la pala debe iniciar la carga, ajuste esperando el punto # 1. Este punto indica el inicio de la zona de llenado.
+Al final del silo, establecer otro punto de espera (# 2). Este punto indica el final de la zona de llenado.
+Ajuste la dirección para invertir y revertir a salir del silo (y un poco más). Trate de conducir lo más recto posible.
+Ajuste la dirección para adelante , y conducir hasta el bunker / trailer que usted desea rellenar. Los 3 o 4 últimos puntos de interés de que el artículo debe ser lo más recto posible.
+En el punto donde la pala debe descargar, set esperando el punto # 3.
+Ajuste la dirección para revertir , y revertir la espalda lo más recta posible.
+Ajuste la dirección para adelante y conducir de vuelta a la derecha antes de que el punto de partida.
+
+Antes de iniciar el controlador, asegúrese de que ha establecido los necesarios puestos de pala .
+Al iniciar el conductor, que pilotará para esperar el punto # 1 y ajuste la pala a la posición de carga . Él continuará hasta que la pala está llena, y luego se detiene y establece la pala a la posición de transporte . A continuación, se cambia a la "marcha atrás del silo" parte de la grabación, y seguirá impulsando el curso grabado. Cuatro puntos de ruta antes de esperar el punto # 3 el conductor ajustar la pala a la posición de pre-descarga y empezar a buscar un bunker o un remolque para descargar a. Si no se ha encontrado nada, el conductor se detendrá. Si se ha encontrado algo, el conductor continúa hasta que la pala está lista para descargar en el búnker / remolque. El remolque no tiene que ser exactamente en / detrás de espera el punto # 3, se puede, de hecho, se encuentra ligeramente por delante de él. Pero, para asegurar un procedimiento perfecto, el remolque debe ser justo en su punto de espera # 3. Después de la descarga, la pala se fija de nuevo a la posición de pre-descarga ; el conductor utilizar la parte "inverso desde bunker / trailer" de la grabación y continuar el curso de la hasta que alcanza el punto final.
+
+válida para v3.41
+Controles HUD Modos de conducción Generar curso
+Generación de un curso
+Para una descripción general de los ajustes, consulte HUD: generación de golf .
+Con el fin de generar un curso de campo (para el trabajo de campo y los modos de fertilización / siembra) de forma automática, los siguientes pasos se deben hacer.
+Grabar un curso alrededor de los bordes del campo. No importa en qué dirección, sólo debe tener cuidado de no cortar las esquinas con demasiada fuerza. Es posible guardar este "supuesto frontera" y usarlo más tarde para más generaciones de cursos para este campo.
+Diagrama generación Curso 1: curso borde del campo
+Fig. 1: Curso de frontera a lo largo de los bordes de un campo
+Ajuste el ancho de trabajo. Se necesita el ancho de trabajo calculado la distancia entre los carriles del curso.
+Establezca la esquina inicial. Dependiendo del tamaño y la forma del campo y la dirección de partida elegido, la posición del punto de partida puede estar en diferentes lugares:
+Diagrama generación Curso 2: esquina de comenzar
+Fig. 2: Dos posibles posiciones de partida con un "noreste" a partir de la esquina
+Ajuste la dirección de arranque. Esa es la dirección en la que el primer carril tendrá.
+(Opcional)
+Activar / desactivar Volver al primer punto . Si está activado, el conductor lleve al punto de partida (en lugar del punto final) cuando la herramienta utilizada es completa (modo de trabajo de campo) / vacío (fertilizinger y el modo de la siembra). Esto puede ser útil si la descarga / recarga curso comienza en el punto de partida.
+Diagrama generación Curso 3: vuelta a primer punto
+Fig. 3: Las unidades de conductor hasta el lugar de partida del punto final
+Esta configuración se codificarán con fuerza en el curso, lo que significa que no se puede cambiar dinámicamente mientras que el curso está siendo impulsada.
+(Opcional)
+Establezca la opción de cabecera. Courseplay actualmente soporta uno (1) de carril, que puede ser o bien antes (por ejemplo, con una cosechadora) o después (por ejemplo, con un cultivador) el curso de campo.
+Si la punta está ajustado en "antes", se iniciará aproximadamente en el conjunto inicial esquina. Si se establece en "después de", el curso de campo continuará directamente en el carril de cabecera.
+Dependiendo del tamaño y la forma del campo, el conjunto inicial esquina y comenzar dirección, puede suceder que la punta comienza en un punto donde hay múltiples son puntos de interés cerca (por ejemplo, los puntos del curso de campo). Esto puede conducir a que el conductor no siempre encontrar waypoint # 1. Si esto sucede, se puede establecer de inicio del curso en el primer punto en el Controles del conductor página.
+Haga clic en Generar curso .
+Diagrama generación Curso 4: Curso generada
+Fig. 4: Curso generada
+Si la fila generar supuesto no se muestra, usted debe comprobar si se cumplen todos los requisitos:
+un curso con un mínimo de 5 puntos de ruta se debe cargar (cuando se activa promontorio, el curso tiene que tener al menos 20 puntos de ruta )
+el curso cargado no se ha generado
+el curso cargado no se ha combinado de múltiples cursos
+un rincón de partida se ha establecido
+una dirección de partida se ha establecido
+La espera señala al comienzo y al final se ajustará automáticamente. Si desea agregar un curso de descarga / recarga, el curso de campo debe generarse primero. Después, añadir el curso de descarga / recarga.

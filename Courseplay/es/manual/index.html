@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from courseplay.github.io/courseplay/en/manual/index.html by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 16 Aug 2013 22:24:34 GMT -->
+<head>
+	<meta charset='utf-8' />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+	<link rel="stylesheet" href="../../res_es/css/reset.css">
+	<!--<link rel="stylesheet" href="../../res_es/fonts/icomoon/style.css" type="text/css" charset="utf-8">-->
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../../res_es/fonts/adelle/stylesheet.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="../../res_es/fonts/caslon/stylesheet.css" type="text/css" charset="utf-8">
+	<link rel="stylesheet" href="../../res_es/css/base.css">
+	<link rel="stylesheet" href="../../res_es/css/manual.css">
+	<!--[if lte IE 7]><script src="res/js/lte-ie7.js"></script><![endif]-->
+	<!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+	<!--[if gte IE 9]><style type="text/css">.buttonInfo { filter: none; }</style><![endif]-->
+
+	<title>Manual &rsaquo; Courseplay</title>
+
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-38537916-1']);
+		_gaq.push(['_trackPageview']);
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+</head>
+
+<body class="no-js">
+<div id="container">
+	<header>
+		<h1><a class="imgLink" href="../index.html"><img src="../../res_es/img/cp_logo.png" alt="Courseplay"></a></h1>
+	</header>
+	
+	<section id="navSection">
+		<nav id="mainNav">
+			<li><a href="../installation/index.html">Instalación<span class="info">¿Cómo? ¿Qué? ¿Cuándo?</span></a></li>
+			<li class="active">Manual</li>
+			<li><a href="../faq/index.html">FAQ<span class="info">¿Qué más hay que saber?</span></a></li>
+			<li><a href="../changelog/index.html">Historial de cambios<span class="info">¿Qué hay de nuevo, minino?</span></a></li>
+			<li><a href="../authors/index.html">Autores<span class="info">¿Quién forma el grupo?</span></a></li>
+		</nav>
+	</section>
+
+	<section id="manual" class="content" data-version="3.41.0000">
+		<h2>Manual <span id="manualVersion">valid for v3.41</span></h2>
+		<div id="manualTabs">
+			
+			<div id="manualNav" class="default">
+				<ul>
+					<li>
+						<a href="#controls"><span>Controls</span></a>
+					</li>
+					<li class="has-sub">
+						<a href="#hud"><span>HUD</span></a>
+						<ul>
+							<li><a href="#hud_driverControls"><span>Controles de conducción</span></a></li>
+							<li><a href="#hud_saveCourse"><span>Guardar ruta</span></a></li>
+							<li><a href="#hud_manageCourses"><span>Administrar rutas</span></a></li>
+							<li><a href="#hud_mode2settings"><span>Configuración modo combinado</span></a></li>
+							<li><a href="#hud_manageCombine"><span>Administrar cosechadora</span></a></li>
+							<li><a href="#hud_speeds"><span>Velocidades</span></a></li>
+							<li><a href="#hud_generalSettings"><span>Configuración General</span></a></li>
+							<li><a href="#hud_drivingSettings"><span>Configuración Conducción y trabajo</span></a></li>
+							<li><a href="#hud_courseGeneration"><span>Generar Ruta</span></a></li>
+							<li><a href="#hud_shovelSettings"><span>Posiciones Pala</span></a></li>
+							<li><a href="#hud_combineSettings"><span>Controles Cosechadora</span></a></li>
+						</ul>
+					</li>
+					<li id="driveModesNav">
+						<a href="#driveModes"><span>Modos de conducción</span></a>
+						<ul>
+							<li><a href="#driveMode1"><span>Conductor</span></a></li>
+							<li><a href="#driveMode2"><span>Descargar cosechadora y descargar en silo (trigger)</span></a></li>
+							<li><a href="#driveMode3"><span>Descargar cosechadora y descargar en remolque (Overloader)</span></a></li>
+							<li><a href="#driveMode4"><span>Fertilizar y sembrar</span></a></li>
+							<li><a href="#driveMode5"><span>Traslado</span></a></li>
+							<li><a href="#driveMode6"><span>Trabajo campo</span></a></li>
+							<li><a href="#driveMode7"><span>Autodescarga de cosechadora</span></a></li>
+							<li><a href="#driveMode8"><span>Transporte estiercol líquido</span></a></li>
+							<li><a href="#driveMode9"><span>Llenado y vaciado pala</span></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#generateCourse"><span>Generar ruta</span></a>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="manualSection" id="controls">
+				<h3>Controls</h3>
+				<p>En general, el control de Courseplay funciona con el ratón, debido a que las teclas libres en Farming Simulator son más bien raras. Al utilizar el <span class="emphasize1">botón derecho del ratón</span> se activa el HUD del Courseplay, donde puede configurar los conductores. Además de un par de funciones, como iniciar y detener la conducción, están disponibles para el teclado, mediante el uso de las teclas de <kbd title="Control">CTRL</kbd>+<kbd title="Keypad 7">KP 7</kbd> a <kbd title="Control">CTRL</kbd>+<kbd title="Keypad 9">KP 9</kbd>. En el hud puede cambiar la forma de abrir o cerrar el courseplay con el uso del teclado (por defecto: <kbd title="Control">CTRL</kbd>+<kbd title="Delete">SUPR</kbd>).</p>
+			</div>
+			
+			<div class="manualSection" id="hud">
+				<h3>HUD</h3>
+				<p>Al abrir el HUD, los controles del ratón se activan automáticamente. Es decir, no se puede utilizar el ratón para mover la cámara. Para desactivar los controles del ratón, debe hacer clic en el botón derecho del ratón. Alternativamente, usted puede hacer clic en la <span class="hudIcon closeHud inline" title="close button">X</span> en la esquina superior derecha del HUD. Si lo hace, se cierra el hud y desactiva los controles del ratón, ya que se cierra el courseplay</p>
+				<p>El HUD está dividido en varias páginas. Usted puede navegar a través de estos, ya sea usando las flechas izquierda / derecha <span class="hudIcon arrowLeft inline" title="Flecha Izquierda">&lsaquo;</span>/<span class="hudIcon arrowRight inline" title="Flecha Derecha">&rsaquo;</span> en la parte superior del HUD, o haciendo clic directamente sobre el icono de la página correspondiente en la parte superior. Tenga en cuenta que determinadas páginas se desactivan según en el modo seleccionado.</p>
+				<p>En la sección central de cada página, hay multitud de ajustes y opciones que se pueden elegir para dar órdenes, simplemente haciendo clic en la acción elegida o de sus correspondientes botones (<span class="hudIcon plus inline" title="más">+</span>/<span class="hudIcon minus inline" title="menos">-</span>/<span class="hudIcon arrowLeft inline" title="Flecha Izquierda">&lsaquo;</span>/<span class="hudIcon arrowRight inline" title="Flecha Derecha">&rsaquo;</span>) con el <span class="emphasize1">botón izquiero del ratón</span>. Ciertos valores y ajustes como desplazarse a través de la lista de rutas, los ajustes de anchura, velocidades oder porcentajes, etc, se puede modificar en pasos más grandes pulsando la tecla <kbd title="Control">CTRL</kbd> mientras hace click en los botones.</p>
+				<p>En la parte inferior de la hud encontrará información sobre el conductor, la ruta cargada y el estado actual. También en esta sección, usted puede guardar la ruta actual haciendo click <span class="hudIcon save inline" title="save course"></span>.</p>
+			</div>
+			
+			<div class="manualSection" id="hud_driverControls">
+				<h3>
+					<div class="pageButton page1"></div>
+					HUD: Controles conducción
+				</h3>
+				<div class="manualSubSection">
+					<h5>Sin ruta cargada</h5>
+					<ul>
+						<li>
+							<h4>Empezar grabación</h4>
+							<p>Con esta opción, se activa el modo grabación en el Courseplay. Tu puedes conducir y grabar la ruta que el conducctor podrá usar más tarde. Tras la activación, tres huevos en un intervalo de aprox. 10 a 20 mts. se mostrará en la salida. Usted debe asegurarse de que ir más o menos recto hasta llegar al tercer huevo (tercer punto de paso).</p>
+							<p>Cuando la grabación esta activa, puede desactivar los controles del ratón, haga clic en el botón derecho del ratón, así puede mirar a su alrededor mientras conduce y graba.</p>
+						</li>
+						<li>
+							<h4>Pausa de la grabación</h4>
+							<p>Durante la grabación se puede poner en pausa la grabación con esta opción. Una flecha amarilla aparecerá en pantalla, que muestra la dirección hasta el último punto. Además, durante la pausa puede eliminar los últimos puntos, respectivamente.</p>
+						</li>
+						<li>
+							<h4>Parar grabación</h4>
+							<p>Esta opción solo esta disponible durante la grabación. Cuando se alcanza el punto final de la ruta, haga click en "detener la grabación". Se recomienda tener aproximadamente desde el punto final de 5 a 10 mts. antes del punto de inicio, y que tenga aproximadamente la misma dirección que el punto de inicio, es decir, debes terminar mirando hacia el punto de inicio, como si estubierás detrás de un vehículo que iniciara esa ruta.</p>
+						</li>
+						<li>
+							<h4>Ajustar el punto de espera</h4>
+							<p>Durante la grabación, usted tiene la posibilidad de establecer puntos de espera en la ruta. En esos puntos, el conductor, durante la marcha de la ruta, se detenga y espere hasta que le dices que continuer, o el tiempo de espera configurado ha pasado. Cuando un conductor llega a un punto de espera, aparecerá un mensaje (<code>XYZ ha alcanzado el punto de espera.</code>).</p>
+						</li>
+						<li>
+							<h4>Establecer punto de cruce</h4>
+							<p>Los puntos de cruce son "señales" o "puntos de combinación" donde dos rutas separadas pueden combinarse (see <a href="#hud_manageCourses" class="internalTab">Administrador de rutas</a>). En ambas rutas, se determinan dos puntos de cruce (uno en cada ruta) que están más cerca uno del otro a 50 metros. La ruta combinada conducirá hasta el punto de cruce del primer curso, y desde aquí ir por la segunda ruta de su respectivo punto de cruce.</p>
+							<figure>
+								<img src="../../res_es/img/crossingPoints_es.png" alt="Crossing points diagram" class="infoImg">
+								<figcaption>Fig. 1: Combinación de dos rutas en sus puntos de cruce.</figcaption>
+							</figure>
+							<p><span class="emphasize1">Nota:</span> Los puntos Inicio y Parada de una ruta, se definen automáticamente como puntos de cruce. Por lo tanto, no tienen que ser declarado manualmente como los que se graban.</p>
+						</li>
+					</ul>
+				</div>
+				<div class="manualSubSection">
+					<h5>Ruta cargada, sin iniciar</h5>
+					<ul>
+						<li>
+							<h4>Condudir ruta</h4>
+							<p>Cuando haya grabado o cargado una ruta, puede "contratar" un conductor para que lo llevara por la ruta. A partir de este momento, usted no tendrá ningún tipo de control manual sobre el tractor.</p>
+						</li>
+						<li>
+							<h4>Cambiar modo</h4>
+							<p>Con el fin de ser capaz de hacer muchos tipos de trabajo diferentes, hay diferentes modos de conducción. El modo actual aparecerá en la parte inferior del HUD. Al hacer clic en "Modo de cambio", se puede recorrer los distintos modos.</p>
+							<p>Alternativamente, puede utilizar los nueve botones en la parte derecha del HUD. Tiene la ventaja de elegir el modo deseado directamente.</p>
+							<p>Los diferentes modos estan descritos con detalle en la sección <a class="internalTab" href="#driveModes">Modos de conducción</a>.</p>
+						</li>
+						<li>
+							<h4>Borrar ruta</h4>
+							<p>Cuando una ruta ha sido guardada o cargada, puede borrar la ruta seleccionada. La ruta guardada no se borrará de la partida guardada, sólo se limpiará su ruta actual.</p>
+						</li>
+						<li>
+							<h4>Iniciar ruta en&hellip;</h4>
+							<p class="emphasize2">Disponible en todos los modos excepto "Llenado y vaciado de pala"</p>
+							<p>Algunas rutas tienen relativamente muchos puntos de interés en un área pequeña, especialmente en el punto de partida (por ejemplo, rutas generadas con encabezamiento). Aquí se puede elegir si el conductor comienza la ruta desde el punto de referencia más cercano (ajuste predeterminado) o directamente en el primer punto de espera.</p>
+						</li>
+					</ul>
+				</div>
+				<div class="manualSubSection">
+					<h5>Ruta cargada, conduciendo</h5>
+					<ul>
+						<li>
+							<h4>Parar conductor</h4>
+							<p>Por supuesto puedes parar siempre el conductor que este en marcha. Más tarde, cuando reactive al conductor (iniciar ruta), éste continuará desde el punto de espera más proximo.</p>
+						</li>
+						<li>
+							<h4>Continuar</h4>
+							<p>Cuando un conductor ha llegado a un punto de espera, puede indicarle manualmente que continue.</p>
+						</li>
+						<li>
+							<h4>Marcadores de surcos</h4>
+							<p class="emphasize2">Disponibles solo en modo "Fertilizando y sembrando".</p>
+							<p>Cuando se utiliza una sembradora con una ruta generado, elejan si los marcadores de de surcos se deben implementar de forma automática o manual (es decir, que los controla).</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="manualSection" id="hud_saveCourse">
+				<h3>HUD: guardando la ruta</h3>
+				<p>En la sección inferior de la hud hay un icono de disco <span class="hudIcon save inline" title="Guardar Ruta"></span>. Después de grabar una ruta, puede guardarlo haciendo click en el disco. En la parte superior de la pantalla aparecerá una entrada de texto donde se puede nombrar la ruta. Confirmar con <kbd title="Enter">ENTER</kbd> (Enter).</p>
+			</div>
+			
+			<div class="manualSection" id="hud_manageCourses">
+				<h3>
+					<div class="pageButton page2"></div>
+					HUD: Administrar rutas
+				</h3>
+				<p>En esta página encontrará un resumen que contiene las rutas guardados. Se puede desplazar a través de la lista con las flechas arriba / abajo <span class="hudIcon arrowUp inline" title="Flecha Arriba"></span>/<span class="hudIcon arrowDown inline" title="Flecha Abajo"></span> cerca del lado derecho del HUD.</p>
+				
+				<dl class="buttonInfo">
+					<dt>Cambios por defecto</dt>
+					<dd>6 rutas</dd>
+					<div class="clearfix"></div>
+					<dt><kbd title="Control">CTRL</kbd> cambiar</dt>
+					<dd>12 rutas</dd>
+					<div class="clearfix"></div>
+				</dl>
+
+				<p>Cada ruta tiene tres opciones, respectivamente:
+					<ul>
+						<li>
+							<h4><span class="hudIcon openCourse" title="Cargar/Combinar ruta"></span> Cargar/Combinar</h4>
+							<p>Cargando la ruta. Si ya existe una ruta cargada, la ruta clicada será combinada con la ya cargada en el primer punto de cruce que sea común <a href="#hud_driverControls" class="internalTab">Punto de cruce (Verde)</a>. En ambas rutas, se determinan dos puntos de cruce (uno en cada ruta) que estén más cerca uno del otro a 50 metros. La ruta combinada conducirá hasta el punto de cruce la primera ruta, y desde aquí ir por la segunda ruta de su respectivo punto de cruce.</p>
+							<figure>
+								<img src="../../res_es/img/crossingPoints_es.png" alt="Crossing points diagram" class="infoImg">
+								<figcaption>Fig. 1: Combinación de dos rutas en los puntos de cruce</figcaption>
+							</figure>
+						</li>
+						<li>
+							<h4><span class="hudIcon addCourse" title="Añadir Ruta"></span> Añadir</h4>
+							<p>Si ya existe una ruta cargada, se agregará la ruta clicada al final de la ruta ya cargada.</p>
+						</li>
+						<li>
+							<h4><span class="hudIcon deleteCourse" title="Borrar Ruta"></span> Borrar</h4>
+							<p>La ruta se elimina completamente de Courseplay y la partida guardada. No estará disponible ya, ni siquiera cuando se carga el juego de nuevo.</p>
+						</li>
+					</ul>
+				</p>
+				<p>Con el fin de grabar o cargar una nueva ruta, la ruta actual se debe borrar. Ver <a href="#hud_driverControls" class="internalTab">Controles conducción</a> > "Borrar puntos espera".</p>
+			</div>
+			
+			<div class="manualSection" id="hud_mode2settings">
+				<h3>
+					<div class="pageButton page3"></div>
+					HUD: Configuración modo combinado
+				</h3>
+				<p class="emphasize2">Esta página esta visible en todos los modos excepto en "Traslado", "Trabajo campo" y "Llenar y vaciar pala".</p>
+				<p>Como su nombre lo indica, estos valores son para la cosechadora y los modos de carga. Puede configurar al conductor para ser más adecuado para descargar la cosechadora. Los valores pueden ser cambiados clicando en los botones <span class="hudIcon plus inline" title="más">+</span>/<span class="hudIcon minus inline" title="menos">-</span> del borde derecho (aumenta más al dejar pulsado la tecla <kbd title="Control">CTRL</kbd>).</p>
+				<ul>
+					<li>
+						<h4>Desplazamiento lateral</h4>
+						<p>Este valor define el desplazamiento entre el conductor y la cosechadora/tobera durante la descarga horizontal. Técnicamente, es la distancia entre el centro de la cosechadora y el extremo del tubo. Por defecto está ajustado en "auto" - el conductor calcula la distancia lateral de forma automática. El valor puede ser cambiado y puesto en "manual" con <span class="hudIcon plus inline" title="más">+</span>/<span class="hudIcon minus inline" title="menos">-</span>. Usted puede restablecerla en "automático" estableciéndo 0 (cero).</p>
+						<dl class="buttonInfo">
+							<dt>Cambio por defecto</dt>
+							<dd>0.1 m</dd>
+							<div class="clearfix"></div>
+							<dt><kbd title="Control">CTRL</kbd> Cambiar</dt>
+							<dd>0.5 m</dd>
+							<div class="clearfix"></div>
+						</dl>
+					</li>
+					<li>
+						<h4>Desplazamiento tubería</h4>
+						<p>Este valor define el desplazamiento vertical entre el trailer del conductor y la cosechadora/tobera durante la descarga (delante / detrás). Esto está siendo utilizado para tener el remolque directamente debajo de la tubería. Por defecto esta en "auto". En contraste con el desplazamiento o el radio de giro, al hacer clic <span class="hudIcon plus inline" title="más">+</span>/<span class="hudIcon minus inline" title="menos">-</span> añadir/resta del valor automático. Significado: por ejemplo, "1 m por delante", "2.5 m detrás", .... Usted puede restablecerla en "automático" ajustándolo a 0 (cero).</p>
+						<dl class="buttonInfo">
+							<dt>Cambio por defecto</dt>
+							<dd>0.1 m</dd>
+							<div class="clearfix"></div>
+							<dt><kbd title="Control">CTRL</kbd> Cambiar</dt>
+							<dd>0.5 m</dd>
+							<div class="clearfix"></div>
+						</dl>
+					</li>
+					<li>
+						<h4>Radio de giro</h4>
+						<p>Este valor define el radio de giro del tractor conducido, que se utiliza especialmente para las maniobras de giro al descargar una cosechadora o helicóptero. El valor, como el desplazamiento lateral, se calcula automáticamente (basado en ángulo de las ruedas, ejes, ancho de vía, número de trailers), tan pronto como el conductor es contratado. Puede ser cambiado y poner en "manual" <span class="hudIcon plus inline" title="más">+</span>/<span class="hudIcon minus inline" title="menos">-</span>. Usted puede restablecerla en "automático" ajustándolo a 0 (cero).</p>
+						<dl class="buttonInfo">
+							<dt>Cambio por defecto</dt>
+							<dd>1 m</dd>
+							<div class="clearfix"></div>
+							<dt><kbd title="Control">CTRL</kbd> Cambiar</dt>
+							<dd>5 m</dd>
+							<div class="clearfix"></div>
+						</dl>
+					</li>
+					<li>
+						<h4>Empezar a %</h4>
+						<p>Este valor define el porcentaje del nivel de llenado de la cosechadora que le dice al conducir para conducir hacia ella y descargarla. Al descargar la tubería, este valor define cuando el segundo conductor de descarga debe unirse a la cadena de descarga.</p>
+						<p><span class="emphasize1">Nota:</span> Si <a href="#hud_generalSettings" class="internalTab">la ruta de busqueda</a> esta activada, este valor es ignorado siempre que el tubo de la cosechadora está en el lado de las frutas y la cosechadora no está lleno.</p>
+						<dl class="buttonInfo">
+							<dt>Cambio por defecto</dt>
+							<dd>5%</dd>
+							<div class="clearfix"></div>
+							<dt><kbd title="Control">CTRL</kbd> Cambiar</dt>
+							<dd>10%</dd>
+							<div class="clearfix"></div>
+						</dl>
+					</li>
+					<li>
+						<h4>Conducir al %</h4>
+						<p>Este valor define el porcentaje de nivel de llenado del remolque con el cual el conductor debe comenzar a conducir la ruta hasta el punto de descarga. Esto puede ser útil si, por ejemplo, el remolque es 97% lleno y el conductor no debería esperar 5 minutos más para la próxima descarga, sólo para conseguir un mísero 3%.</p>
+						<dl class="buttonInfo">
+							<dt>Cambio por defecto</dt>
+							<dd>5%</dd>
+							<div class="clearfix"></div>
+							<dt><kbd title="Control">CTRL</kbd> Cambiar</dt>
+							<dd>10%</dd>
+							<div class="clearfix"></div>
+						</dl>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="manualSection" id="hud_manageCombine">
+				<h3>
+					<div class="pageButton page4"></div>
+					HUD: Administrador Cosechadoras
+				</h3>
+				<p class="emphasize2">Esta página sólo se muestra en los modos "Sobrecarga" y "cosechadora".</p>
+				<p>Estos ajustes solo son relevantes para los modos cosechadora y sobrecarga (remolques con tubería). Usted puede elegir que el conductor busque entre una cosechadora que lo necesita de forma automática (la configuración predeterminada), o tiene una asignada, y cosechadora que no cambian (manual). Si el conductor se ha asignado manualmente a una cosechadora, no tiene que estar en el mismo campo que la cosechadora para que la encuentre. El conductor conducirá desde su punto de partida hasta la cosechadora, no importa dónde está.</p>
+				<p>Esto puede ser útil para campos grandes y montañosos, donde la asignación automática no siempre funciona. O para las áreas que no son campos, como los prados.</p>
+			</div>
+			
+			<div class="manualSection" id="hud_speeds">
+				<h3>
+					<div class="pageButton page5"></div>
+					HUD: Velocidades
+				</h3>
+				<p>Aquí puede ajustar lo rápido que debería conducir su conductor. También, usted puede elegir si una ruta se debe conducir con la velocidad utilizada durante la grabación o la velocidad máxima.</p>
+				<p>Cambiando <code>Velocidad: de grabación</code> y <code>Velocidad: máxima velocidad</code> determinas si la velocidad usada durante la grabación o la máxima velocidad podrá ser usada.</p>
+				<p>ESLimiter version 3.0 y upwards estan soportados..</p>
+				<dl class="buttonInfo">
+					<dt>Cambio por defecto</dt>
+					<dd>1 kph / 0.6 mph</dd>
+					<div class="clearfix"></div>
+					<dt><kbd title="Control">CTRL</kbd> Cambiar</dt>
+					<dd>5 kph / 3.1 mph</dd>
+					<div class="clearfix"></div>
+				</dl>
+			</div>
+		
+			<div class="manualSection" id="hud_generalSettings">
+				<h3>
+					<div class="pageButton page6"></div>
+					HUD: Configuración General
+				</h3>
+				<ul>
+					<li>
+						<h4>Ruta de búsqueda</h4>
+						<p>Si Ruta de búsqueda esta activada (solo en modo cosechadora y sobrecarga), el conductor trata de la mejor manera posible no conducir a través de la fruta.</p>
+						<p>Por un lado, esto significa que en el camino a la cosechadora / desmenuzadora él conduce alrededor de la fruta. Por otro lado, significa que no va a conducir a descargar una cosechadora si el tubo de la cosechadora está en el lado del cultivo . El conductor sólo empezará cuando el tubo está en el lado no sea de cultivo, o la cosechadora está 100% completa (ignorando el ajuste <code>Start&nbsp;at&nbsp;%</code>).</p>
+					</li>
+					<li>
+						<h4>Abrir Courseplay</h4>
+						<p>Tu puedes elegir si el HUD podría abrirse cuando haces click del botón derecho del ratón, o si podría usar teclas del teclado en su lugar (default: <kbd title="Control">CTRL</kbd>+<kbd title="SUPR">SUPR</kbd>).</p>
+					</li>
+					<li>
+						<h4>Mostrar Puntos de ruta</h4>
+						<p>Elige que puntos de ruta, de la ruta, podrán ser mostrados</p>
+					</li>
+					<li>
+						<h4>Luces baliza</h4>
+						<p>Elige cuando podrán ser ativadas.</p>
+					</li>
+					<li>
+						<h4>Nivel de depuración</h4>
+						<p>Si hay cualquier problema con Courseplay, puede establecer el nivel de depuración para limitar la profundidad de la información de error que aparece en el registro. Esta información es importante para los desarrolladores, con la que ellos pueden encontrar y corregir los errores.</p>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="manualSection" id="hud_drivingSettings">
+				<h3>
+					<div class="pageButton page7"></div>
+					HUD: Configuración de conducción y trabajo
+				</h3>
+				<ul>
+					<li>
+						<h4>Tiempo de espera</h4>
+						<p>Por defecto, los conductores paran y esperan en los puntos de espera (excepto para los modos trabajo de campo y fertilización/siembra), hasta que el conductor se le dice de forma explícita para continuar (el tiempo de espera = 0 seg). Cuando se ha establecido un tiempo de espera (más de 0 segundos), el conductor esperará en el punto de espera hasta que haya pasado ese tiempo establecido y luego continúa automáticamente. Esto puede ser útil para, por ejemplo, una estación de peso hacia un BGA.</p>
+						<dl class="buttonInfo">
+							<dt>Cambio por defecto</dt>
+							<dd>5 sec</dd>
+							<div class="clearfix"></div>
+							<dt><kbd title="Control">CTRL</kbd> Cambiar</dt>
+							<dd>10 sec</dd>
+							<div class="clearfix"></div>
+						</dl>
+					</li>
+					<li>
+						<h4>Desplazamiento horizontal</h4>
+						<p>Solo para modo trabajo de campo y fertilizar/sembrar. Para algunas de las herramientas que podría ser importante que no conduzcan la ruta exactamente en la línea central, si no un poco hacia la derecha o hacia la izquierda (por ejemplo, colectores bala). Este desplazamiento se puede configurar aquí.</p>
+						<dl class="buttonInfo">
+							<dt>Cambio por defecto</dt>
+							<dd>0.5 m</dd>
+							<div class="clearfix"></div>
+							<dt><kbd title="Control">CTRL</kbd> Cambiar</dt>
+							<dd>1 m</dd>
+							<div class="clearfix"></div>
+						</dl>
+					</li>
+					<li>
+						<h4>Desplazamiento vertical</h4>
+						<p>Solo para modo trabajo de campo y fertilizar/sembrar. Idéntico a desplazamiento horizontal, sólo que el conductore conducirá más adelante / detrás de la ruta real.</p>
+						<dl class="buttonInfo">
+							<dt>Cambio por defecto</dt>
+							<dd>0.5 m</dd>
+							<div class="clearfix"></div>
+							<dt><kbd title="Control">CTRL</kbd> Cambiar</dt>
+							<dd>1 m</dd>
+							<div class="clearfix"></div>
+						</dl>
+					</li>
+					
+					<li>
+						<h4>Copiar ruta</h4>
+						<p>Le permite copiar la ruta exacta y puntos de ruta de otro vehículo. También funciona con rutas combinados, generada o sin guardar.</p>
+						<p>Primero elige el vehículo cuyo ruta desea copiar, entonces presione then press el botón <span class="hudIcon copy inline" title="Botón copiar">[copiar]</span>. La ruta y puntos actuales serán reemplazados por completo.</p>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="manualSection" id="hud_courseGeneration">
+				<h3>
+					<div class="pageButton page8"></div>
+					HUD: Generar Ruta
+				</h3>
+				<p class="emphasize2">Esta página solo aparecerá en los modos "Fertilizar y sembrar" y "Trabajo de campo"</p>
+				<p>Para uso general, ver la página <a href="#generateCourse" class="internalTab">Generar de ruta</a>.</p>
+				<ul>
+					<li>
+						<h4>Anchura de trabajo</h4>
+						<p>El Ancho de trabajo de la herramienta se puede fijar aquí, se calcula por el ancho del carril de la ruta.</p>
+						<dl class="buttonInfo">
+							<dt>Cambio por defecto</dt>
+							<dd>0.1 m (above 10 m: 0.5 m)</dd>
+							<div class="clearfix"></div>
+							<dt><kbd title="Control">CTRL</kbd> Cambiar</dt>
+							<dd>0.5 m (above 10 m: 2 m)</dd>
+							<div class="clearfix"></div>
+						</dl>
+					</li>
+					<li>
+						<h4>Esquina de inicio</h4>
+						<p>Le permite elegir la esquina del campo, desde donde se iniciará la ruta.</p>
+					</li>
+					<li>
+						<h4>Dirección de inicio.</h4>
+						<p>Le permite elegir la dirección por donde el primer carril irá desde la esquina de partida. Las opciones dependen de la esquina inicial.</p>
+					</li>
+					<li>
+						<h4>Volver al primer punto</h4>
+						<p>Elija si el conductor debe conducir de vuelta al primer punto (inicio) cuando la herramienta está llena (modo trabajo de campo) / vacia (modo fertilizar/sembrar).</p>
+					</li>
+					<li>
+						<h4>Proteger cultivo</h4>
+						<p>Establecer si la ruta debe tener un carril para proteger el cultivo (turnrow) (<a href="http://en.wikipedia.org/wiki/Headland_(agriculture)" title="Leer más sobre headland en Wikipedia" class="iconLink"><span class="hudIcon wiki inline">Wikipedia</span></a>), y si debe ser antes (p. e., con una cosechadora) o después (p. e., con una sembradora).</p>
+					</li>
+					<li>
+						<h4>Generar ruta</h4>
+						<p>Por último, para crear la ruta con los ajustes anteriores, los requisitos son: <br />
+						<ol>
+							<li>Una ruta con al menos <span class="emphasize2">5 puntos de ruta</span> debe ser cargada (cuando se activa proteger el cultivo, la ruta cargada tiene que tener por lo menos <span class="emphasize2">20 puntos de ruta</span>)</li>
+							<li>La ruta cargada no ha sido generada</li>
+							<li>La ruta cargada no ha sido combinada desde múltiples rutas</li>
+							<li>Una Esquina de inicio se ha establecido</li>
+							<li>Una Dirección de inicio se ha establecido</li>
+						</ol>
+					</li>
+				</ul>
+			</div>
+
+			<div class="manualSection" id="hud_shovelSettings">
+				<h3>
+					<div class="pageButton page9"></div>
+					HUD: Posiciones de pala
+				</h3>
+				<p class="emphasize2">Esta página solo esta visible en el modo <a href="#driveMode9" class="internalTab">Llenar y vaciar pala</a></p>
+				<p>Coloque el brazo, pala y recogedor de su agrado, a continuación, haga clic en el botón correspondiente.</p>
+				<p class="emphasize2"><span class="emphasize1">Pro tip:</span> We recommend that you not lift/lower/open etc. the shovel and grabber to their maximum rotations &mdash; de lo contrario, podrían quedar atrapados durante la conducción de la ruta.</p>
+				<p class="emphasize2">Estas posiciones no tienen que ajustarse durante la grabación. Asimismo <span class="emphasize1">no</span> se indicará <span class="emphasize1">cuando</span> la pala debe tener la posición ajustada. Se pueden reemplazar en cualquier momento dado. Estos no se guardarán al salir del juego.</p>
+				<br />
+				<ul>
+					<li>
+						<h4>Posición de carga</h4>
+						<p>La posición del brazo, pala y recogedor durante la carga.</p>
+						<figure>
+							<img src="../../res_es/img/manual_mode9_01_loading.png" alt="Pala en posición de carga normal" class="infoImg origSize">
+							<figcaption>Fig. 1: Pala en posición de carga normal</figcaption>
+						</figure>
+					</li>
+					<li>
+						<h4>Posición de transporte</h4>
+						<p>La posición del brazo, pala y recogedor durante el transporte.</p>
+						<figure>
+							<img src="../../res_es/img/manual_mode9_02_transport.png" alt="Posición de la pala durante el transporte" class="infoImg origSize">
+							<figcaption>Fig. 2: Pala en posición de transporte habitual</figcaption>
+						</figure>
+					</li>
+					<li>
+						<h4>Posición Pre-descarga</h4>
+						<p>La posición del brazo, pala y recogedor antes de la descarga. <span class="emphasize2">Esta posición se utiliza para que la pala no choque en un remolque de espera.</span></p>
+						<figure>
+							<img src="../../res_es/img/manual_mode9_03_pre-unloading.png" alt="Pala en posición de pre-carga normal" class="infoImg origSize">
+							<figcaption>Fig. 3: Pala en posición de pre-carga normal.</figcaption>
+						</figure>
+					</li>
+					<li>
+						<h4>Posición de descarga</h4>
+						<p>La posición del brazo, pala y recogedor durante la descarga.</p>
+						<figure>
+							<img src="../../res_es/img/manual_mode9_04_unloading.png" alt="Pala en posición de descarga" class="infoImg origSize">
+							<figcaption>Fig. 4: Pala en posición de descarga habitual</figcaption>
+						</figure>
+					</li>
+					<li>
+						<h4>Stop + ir cargando</h4>
+						<p>Si está activado, el conductor se detendrá cuando la pala se está llenando. El conductor se moverá hacia adelante cuando no se llena más hasta que se llena de nuevo, repitiendo hasta que esté completo.</p>
+						<p>Si no está activado, el conductor conducirá a través del silo, se llenandose mientras se mueve (por defecto).</p>
+					</li>
+				</ul>
+			</div>
+
+			<div class="manualSection" id="hud_combineSettings">
+				<h3>
+					<div class="pageButton page0"></div>
+					HUD: Controles cosechadoras
+				</h3>
+				<p class="emphasize2">Esta página sólo se muestra para cosechadoras y picadoras.</p>
+				<ul>
+					<li>
+						<h4>Llamar conductor / Conductor requerido.</h4>
+						<p>Llamar a un controlador de forma manual. Si un conductor ha encontrado la cosechadora y está en su camino, se mostrará su nombre.</p>
+					</li>
+					<li>
+						<h4>Iniciar/Parar Conductor</h4>
+						<p>Iniciar o detener el conductor de forma manual. Si está parado, el conductor esperará hasta ser llamado para volver a empezar.</p>
+					</li>
+					<li>
+						<h4>Enviar conductor a casa</h4>
+						<p>Enviar manualmente el conductor actual para seguir su ruta. Él conducirá la ruta, descarga / sobrecarga, y conducirá hacia su primer punto de espera.</p>
+					</li>
+					<li>
+						<h4>Lado conductor</h4>
+						<p class="emphasize2">Solo visible con picadoras.</p>
+						<p>Por defecto, los conductores eligen el lado del accesorio (no la fruta) para conducir por el y descargar una picadora. Con esta opción se puede codificar una parte de su elección donde deberían conducir (p. e., cuando se está trillando un campo manualmente en forma de espiral).</p>
+					</li>
+					<li>
+						<h4>Maniobra de giro</h4>
+						<p class="emphasize2">Solo visible para picadoras, solo cuando esten en modo manual (p.e. no en el modo de ayudante o trabajo de campo).</p>
+						<p>Decir manualmente al conductor actual que usted está ahora comenzando su maniobra de giro. El conductor conducirá fuera de su camino y girará también. Al hacer clic de nuevo le dice al conductor que ahora puede volver y continuar la descarga del picadora.</p>
+					</li>
+				</ul>
+			</div>
+
+
+			<!-- ### DRIVEMODES ### -->
+			<div class="manualSection" id="driveModes">
+				<h3>Modos de conducción</h3>
+				<p>Hay 8 modos de conducción diferentes:</p>
+				<ol>
+					<li id="driveMode1">
+						<div class="modeButton mode1"></div>
+						<h4>Ayudante</h4>
+						<p>El tractor espera en el primer punto de espera hasta que su remolque ha sido llenado. Esto puede ocurrir en un silo, en un borde del campo o cualquier otro lugar. Tan pronto como el nivel de llenado alcanza el porcentaje indicado (<code> Conducir en el % </code>), el conductor empieza a conducir la ruta.. As soon as he reaches an unloading trigger, he unloads automatically. Después se sigue la ruta. para volver al primer punto de espera.</p>
+						<p>El último punto de espera debería estar de 5 a 10 mts. antes que el primero, y tener la misma dirección que el primero</p>
+						<figure>
+							<img src="../../res_es/img/manual_mode1_es.png" alt="Diagrama Conductor" class="infoImg">
+							<figcaption>Fig. 1: Punto de inicio, puntos de espera y punto final en el modo ayudante</figcaption>
+						</figure>
+					</li>
+					
+					<li id="driveMode2">
+						<div class="modeButton mode2"></div>
+						<h4>Combinado</h4>
+						<p>El modo combinado es muy similar al modo <a href="#driveMode1" class="internalTab">Ayudante</a>, en este el tractor conduce una ruta y descarga en el silo, pero además, el conductor descarga una cosechadora trabajando o desmenuzadora en el campo.</p>
+						<p>El tractor se espera en el último punto de espera hasta que tenga una cosechadora / picadora a su alcance, y el nivel de llenado de la cosechadora está por encima del porcentaje (<code>Empezar&nbsp;en&nbsp;%</code>) indicado para el tractor. Entonces, el conductor conduce a la cosechadora, viene de atrás, y conduce por debajo de la tubería, donde la cosechadora empieza a descargar al remolque del tractor. Si el remolque no esta completo todavía (<code>Conducir&nbsp;en&nbsp;el&nbsp;%</code>), el tractor se da la vuelta y espera en el campo para su próxima operación de descarga. Tan pronto como el nivel de llenado del remolque está por encima del porcentaje <code>Conducir&nbsp;en&nbsp;el&nbsp;%</code>, el conductor conducirá al segundo punto de espera de la asignatura, y desde allí seguir la ruta., descarga el trailer y volver al campo.</p>
+						<p>El tractor tiene dos posibilidades de tener una cosechadora al alcance:
+							<ol>
+								<li>
+									<p>El primer y último punto de espera de la ruta están en el campo, donde la cosechadora está trabajando. En general, el conductor identifica la cosechadora automáticamente (si el campo no es muy grande o muy montañoso). El conductor también identifica varias cosechadoras y se asigna a sí mismo la cosechadora que se adapta mejor a él (basado en la distancia y el nivel de llenado de la cosechadora).</p>
+								</li>
+								<li>
+									<p>El tractor está asignado a uno cosechadora distinta (Ver <a href="#hud_manageCombine" class="internalTab">HUD:&nbsp;Administrar&nbsp;cosechadoras</a>). Sólo la cosechadora seleccionada se descarga, ninguna otra. En este modo, no importa si el tractor y la cosechadora están en el mismo campo. La cosechadora puede esperar fuera del campo y aún así conducir hacia / desde la cosechadora.</p>
+								</li>
+							</ol>
+						</p>
+					</li>
+					
+					<li id="driveMode3">
+						<div class="modeButton mode3"></div>
+						<h4>Sobrecarga (Overloader)</h4>
+						<p>El modo de sobrecarga es similar al modo combinado, aquí el conductor descarga una cosechadora, pero en lugar de conducir una ruta a un punto de descarga (trigger), el conductor en modo sobrecarga descarga en un remolque que esta en espera. Al igual que con el modo combinado, una cosechadora se puede encontrar de forma automática o manualmente.</p>
+						<p>El punto de inicio de la ruta debe estar en las proximidades de un remolque que espera (p.e., otro tractor en modo "Ayudante"). Desde allí, la ruta deberá conducir al remolque. Cuando la tubería está por encima del remolque en espera (cuando es capaz de "cargarlo"), un <span class="emphasize1">punto de espera</span> deberá crearse. Más tarde, durante la conducción de la ruta, este punto en espera le dice al conductor parar, extender la tubería, y empezar a descargar sobre el remolque. Mientras ocurre esto, un mensaje de información <código> XYZ ha alcanzado el punto de descarga</ code> aparecerá. Cuando éste este vacío, el conductor seguirá la ruta y esperará en el último punto de control para su próxima operación de descarga a la vuelta de este remolque que ha cargado.</p>
+						<p>Después del punto en espera, la ruta necesita extenderse un poco más lejos (lejos del remolque), ideal para la vuelta al punto de inicio.</p>
+						<figure>
+							<img src="../../res_es/img/manual_mode7_es.png" alt="Diagrama Sobrecargando" class="infoImg">
+							<figcaption>Fig. 2: Punto de incio, puntos de ruta, punto de espera/descarga y punto de parada en modo Sobrecarga</figcaption>
+						</figure>
+					</li>
+					
+					<li id="driveMode4">
+						<div class="modeButton mode4"></div>
+						<h4>Fertilizar y sembrando</h4>
+						<p>Cuando se fertiliza o siembra, hay dos partes: una, la parte de trabajo real en el campo, y dos, la ruta desde el campo hasta el silo de relleno y volver al campo.</p>
+						<p>La ruta del trabajo de campo puede ser creada en dos formas disferentes:</p>
+						<ol>
+							<li>
+								<p>Grabar la ruta tu mismo. Es importante que existan dos puntos en espera. El primero en la posición en el trabajo en el campo donde debería empezar, y el segundo en la posición en el trabajo en el campo donde debe terminar. Esta área de trabajo es absolutamente necesario para el correcto funcionamiento de este modo.</p>
+							</li>
+							<li>
+								<p>La ruta se puede generar de forma automática. Para más información, consulte la sección <a class="internalTab" href="#generateCourse">Generar ruta</a>. Los puntos en espera se ajustarán automáticamente.</p>
+							</li>
+						</ol>
+						<p>La segunda parte, la recarga automática, es una ruta normal "A a B". Se debe comenzar en el segundo punto de espera (al final de la ruta del trabajo de campo), y luego ir al silo de fertilizante/estiércol líquido/semillas, y de nuevo al campo, que termina justo antes del primer punto de espera de la ruta de trabajo de campo. Se recargará tan pronto como se reconozca un silo. El conductor se detendrá y se llenará de forma automática. Si una herramienta no es rellenable a través de un silo, sino más bien de forma manual (p.e., un esparcidor de estiércol sólido o por medio de un remolque que de transferencia de estiércol líquido), un punto de espera adicional se debe establer y el punto en que la herramienta se llenará.</p>
+						<p>Cuando se conduce a través de un silo, el conductor esperará hasta que la herramienta se llena al 100% y luego continuar su ruta. Cuando no está conduciendo a través de un silo, sino con un punto de espera, el conductor esperará hasta el nivel de llenado de la herramienta ha alcanzado el indicado <code>Comenzar en % </code> porcentaje.</p>
+						<figure>
+							<img src="../../res_es/img/manual_mode4_es.png" alt="Diagrama Fertilizando/Sembrando" class="infoImg">
+							<figcaption>Fig. 3: Punto de inicio, puntos de ruta, puntos de espera y punto de parada, en modo Fertilizar/Sembrar.</figcaption>
+						</figure>
+						<p>Tan pronto como la herramienta está vacía, entra en el modo de transporte y el conductor sigue la ruta de recarga. De vuelta al campo, el conductor conduce hasta el punto en el campo donde donde se detuvo el trabajo pasado, establece la herramienta en modo de trabajo, y continúa trabajando.</p>
+					</li>
+					
+					<li id="driveMode5">
+						<div class="modeButton mode5"></div>
+						<h4>Transferir</h4>
+						<p>El modo de transferencia es la forma más simple para ir de A a B. Utiliza una ruta totalmente normal con un inicio y un punto final. El conductor sigue ciegamente esta ruta, sin descargas ni otras extravagancias. Al llegar al final, el conductor vuelve al punto de inicio y repite el curso. Si desea evitarlo, debes activar la <code>parada al último punto, o al siguiente disparo</code>.</p>
+					</li>
+					
+					<li id="driveMode6">
+						<div class="modeButton mode6"></div>
+						<h4>Trabajo de campo</h4>
+						<p>El modo trabajo de campo es el más bestia de todos los modos diferentes que hay: que puede ser utilizado para el prensado de balas, recogiendo pacas, hilerando, henificando, cultivando y mucho más.</p>
+						<p>Básicamente, trabaja casi de la igual que el modo Fertilizar/Sembrar, sólo que el útil necesita estar vaciado/descargado en lugar de estar rellenado. Además, el área de trabajo debe estar definido entre dos puntos de espera; la ruta de descarga tiene que ir a través de su silo correspondiente.</p>
+						<p>Al igual que en el modo fertilizar / sembrar, la ruta trabajo de campo se puede generar de dos maneras:</p>
+						<ol>
+							<li>
+								<p>Grabar la ruta tu mismo. Es importante que existan dos puntos de espera. El primero en la posición donde el trabajo en el campo debería empezar, y el segundo en la posición en el trabajo en el campo donde debe terminar. Esta zona de trabajo es absolutamente necesario para el correcto funcionamiento de este modo.</p>
+							</li>
+							<li>
+								<p>La ruta se puede generar de forma automática. Para más información, consulte la sección<a class="internalTab" href="#generateCourse"> Generar ruta </a>. Los puntos de espera se ajustarán automáticamente.</p>
+							</li>
+						</ol>
+						<figure>
+							<img src="../../res_es/img/manual_mode6_es.png" alt="Diagrama trabajo de campo" class="infoImg">
+							<figcaption>Fig. 4: Punto de inicio, puntos de ruta, puntos de espera y punto de parada en modo trabajo de campo.</figcaption>
+						</figure>
+						<p>Los útiles podrían ser (des)plegados y (des)activados automaticamente. Los conductores con empacadoras como herramientas se detendran y descargarán las pacas de forma automática.</p>
+					</li>
+					
+					<li id="driveMode7">
+						<div class="modeButton mode7"></div>
+						<h4>Autodescarga de cosechadora</h4>
+						<p>Este modo trabaja de forma similar al modo Sobrecarga (Overloader). La ruta debe tener un punto de espera para la posición de descarga, donde la cosechadora se parará, extenderá la tubería y descargará.</p>
+						<figure>
+							<img src="../../res_es/img/manual_mode7_es.png" alt="Diagrama Sobrecarga (Overloader)" class="infoImg">
+							<figcaption>Fig. 5: Punto de incio, puntos de ruta, punto de espera/descarga y punto de parada en modo Autodescarga de cosechadora.</figcaption>
+						</figure>
+						<p>La cosechadora debe ser contratada como ayudante normal, y <span class="emphasize1">solo entonces</span> Courseplay puede ser activado. La cosechadora trabajará como un ayudante hasta que su nivel de llenado alcanza el porcentaje establecido en <code>Empezar en el %</code>. Entonces conduce hasta el punto de inicio de la ruta, sigue la ruta hasta el punto de espera, en el que se descarga en un remolque que espera. Después, seguirá la ruta hasta el punto final, desde donde se dirigirá a la última posición en la que trabajó como ayudante. Ahora, se activará su cortador y continuará la trilla.</p>
+					</li>
+					
+					<li id="driveMode8">
+						<div class="modeButton mode8"></div>
+						<h4>Transporte estiercol líquido</h4>
+						<p>El modo transporte estiércol líquido es para campos que contienen un silo de estiércol líquido. La herramienta se rellena en un silo de estiércol líquido y luego es conducido hasta el borde de un campo, donde la cisterna de estiércol líquido puede rellenarse de forma automática.</p>
+						<p>Básicamente, no importa donde la ruta comienza o termina, sólo asegúrese de dos cosas:</p>
+						<ol>
+							<li><p>La ruta debe conducir por un silo estiércol líquido por lo que se puede rellenar de forma automática.</p></li>
+							<li><p>En la posición donde la cisterna de estiércol líquido debe recargase (donde el transportista debe parar), es necesario que haya un punto que espera.</p></li>
+						</ol>
+						<figure>
+							<img src="../../res_es/img/manual_mode8_es.png" alt="Diagrama Transporte estiercol líquido" class="infoImg">
+							<figcaption>Fig. 6: Punto de inicio, puntos de ruta, puntos de espera y punto final en modo Transporte estiercol líquido.</figcaption>
+						</figure>
+						<p>El conductor continuará hasta el punto de espera (Recarga) tan pronto como la herramienta se haya vaciado.</p>
+					</li>
+					
+					<li id="driveMode9">
+						<div class="modeButton mode9"></div>
+						<h4>Llenado y vadiado de pala</h4>
+						<p>Este modo le permite llenar una pala en una zona determinada (p.e., un BGA silo) y descargar en un bunker o un remolque.</p>
+						<p>La configuración de la ruta <span class="emphasize1 emphasize2">tiene que ser</span> de la siguiente manera:</p>
+						<figure>
+							<img src="../../res_es/img/manual_mode9_es.png" alt="Llenado y vadiado de pala diagram" class="infoImg">
+							<figcaption>Fig. 7: Todos los puntos y direcciones en el modo Llenado y vadiado de pala.</figcaption>
+						</figure>
+						<ol>
+							<li>
+							<p>Inicio en frente del silo, y conducir hacia delante.</p>
+							</li>
+							<li>
+							<p>En el punto donde la pala debe comenzar a cargar, establezca el punto de espera #1. Este punto indica el inicio de la zona de llenado.</p>
+							</li>
+							<li>
+							<p>Al final del silo, establecer otro punto de espera #2. Este punto indica el final de la zona de llenado.</p>
+							</li>
+							<li>
+							<p>Establecer la dirección para <span class="emphasize2">retroceder</span>, y retroceder para salir del silo (un poco más). Intentar conducir lo más recto posible.</p>
+							</li>
+							<li>
+							<p>Establecer la dirección hacia <span class="emphasize2">adelante</span>, y conducir hasta el bunker/remolque que desea rellenar. Los 3 o 4 últimos puntos de la ruta en dicha sección deben ser lo más rectos posibles.</p>
+							</li>
+							<li>
+							<p>En el punto donde la pala se debe descargar, establecer el punto de espera #3.</p>
+							</li>
+							<li>
+							<p>Establecer la dirección para <span class="emphasize2">retroceder</span>, y retroceder de vuelta lo más recto posible.</p>
+							</li>
+							<li>
+							<p>Establezca la dirección hacia <span class="emphasize2">adelante</span> y conducir de vuelta a justo antes del punto de partida.</p>
+							</li>
+						</ol><br />
+						<p>Antes de comenzar el conductor, asegúrese de que ha establecido la <a href="#hud_shovelSettings" class="internalTab">posición de la pala</a> necesaria.</p>
+						<p>Cuando arranque el conductor, el que conducirá hasta el punto de espera # 1 y colocará la pala en <span class="emphasize2">posición de carga</span>. Él continuará hasta que la pala este llena, entonces el parará y colocará la pala en <span class="emphasize2">posición de transporte</span>. A continuación, pasará a la parte de "retroceder del silo" de la grabación, y continuará conduciendo la ruta grabada. Cuatro puntos de la ruta antes del punto de espera #3, ajustará la pala en <span class="emphasize2">posición pre-descarga</span> y empieza a buscar un bunker o un remolque para descargar. Si no se ha encontrado nada, el conductor se detendrá. Si se ha encontrado algo, el conductor continúa hasta que la pala está lista para descargar en el búnker/remolque. El remolque no tiene que estar exactamente antes/detrás del punto de espera #3, de hecho puede estar situado ligeramente por delante de él. Sin embargo, para asegurar un proceso perfecto, el remolque debe estar a la derecha en el punto de espera 3 . Después de la descarga, la pala estará retrocediendo hasta la <span class="emphasize2">posición pre-descarga</span>; el conductor usará el "camino de vuelta del bunker/remolque" de la grabación y continuará la ruta desde el hasta alcanzar el punto final.</p>
+					</li>
+				</ol>
+			</div>
+		
+			<div class="manualSection" id="generateCourse">
+				<h3>Generar ruta</h3>
+				<p>For general descriptions of the settings, ver <a href="#hud_courseGeneration" class="internalTab">HUD: Generar de ruta</a>.</p>
+				<p>Con el fin de generar una ruta de campo (para los modos trabajo de campo y fertilizar/sembrar) de forma automática, se deberán realizar los siguientes pasos</p>
+				<ol>
+					<li>
+						<p>Grabar un ruta alrededor de los bordes del campo. No importa en qué dirección, sólo debe tener cuidado de no cortar las esquinas con demasiada velocidad. Es posible guardar este "ruta de borde" y utilizarla más tarde para más generaciones de rutas para este campo.</p>
+						<figure>
+							<img src="../../res_es/img/generateCourse_es.png" alt="Diagrama 1 - Generar Ruta: Ruta por bordes de campo" class="infoImg">
+							<figcaption>Fig. 1: Ruta a lo largo del borde de un campo</figcaption>
+						</figure>
+					</li>
+					<li>
+						<p>Ajuste el ancho de trabajo. Se necesita el ancho de trabajo para calcular la distancia entre los carriles de la ruta.</p>
+					</li>
+					<li>
+						<p>Ajuste el ángulo de inicio. Dependiendo del tamaño, la forma del campo y la dirección de comienzo elegido, la posición del punto de inicio puede estar en diferentes lugares:</p>
+						<figure>
+							<img src="../../res_es/img/generateCourse_3_es.png" alt="Diagrama 2 - Generar Ruta: Ángulo de inicio" class="infoImg">
+							<figcaption>Fig. 2: Dos posiciones de inicio posibles con la esquina "noreste"</figcaption>
+						</figure>
+					</li>
+					<li>
+						<p>Establezca la dirección de comienzo. Esta es la dirección que el primer carril tendrá.</p>
+					</li>
+					<li>
+						<p><span class="emphasize2">(Opcional)</span><br />
+						Activar/desactivar <code>Volver al primer punto</code>. Si está activado, el conductor conducirá hasta el punto de comienzo (en lugar del punto de final) cuando la herramienta utilizada este llena (modo trabajo de campo)/vacía (modo Fertilizar/sembrar). Esto puede ser útil si la ruta de descarga/rellenado empieza en el punto de comienzo.</p>
+						<figure>
+							<img src="../../res_es/img/generateCourse_4_es.png" alt="Diagrama 3 - Generar Ruta: Volver al primer punto" class="infoImg">
+							<figcaption>Fig. 3: El conductor conducirá hasta el comienzo en lugar de quedarse en el punto final</figcaption>
+						</figure>
+						<p>Estos ajustes serán codificación fija en la ruta, lo que significa que no puede cambiarse dinámicamente mientras que la ruta está en proceso.</p>
+					</li>
+					<li>
+						<p><span class="emphasize2">(Opcional)</span><br />
+						Establezca su zona de protreger el cultivo. Courseplay Actualmente admite un (1) carril, que puede ser o bien antes (p.e., con una cosechadora) o después (p.e., con un cultivador) de la ruta del campo.</p>
+						<p>Si la zona está en "antes de", comenzará aproximadamente en la esquina de inicio fijada. Si se establece en "después de", la ruta de campo continuará directamente en el carril de protreger cultivo.</p>
+						<p>Dependiendo del tamaño y la forma del campo, la esquina de inicio fijada y de salida, puede suceder que la zona de proteger el cultivo (headlane) comienze en un punto en el que hay cerca varios puntos de ruta (p.e., puntos de ruta de campo). Esto puede llevar a que el conductor no siempre encuentre el punto de espera #1. Si esto sucede, se puede establecer <code>Inicio de la ruta en el primer punto</code> en la página <a href="#hud_driverControls" class="internalTab">Controles de conducción</a>.</p>
+					</li>
+					<li>
+						<p>Click <code>Generar ruta</code>.</p>
+						<figure>
+							<img src="../../res_es/img/generateCourse_2_es.png" alt="Diagrama 4 - Generar Ruta: Ruta generada" class="infoImg">
+							<figcaption>Fig. 4: Ruta generada</figcaption>
+						</figure>
+						<p>Si la opción <code>Generar ruta</code> no se muestra, deberás comprobar si si se cumplen todos los requisitos:</p>
+						<ol>
+							<li>Una ruta con al menos <span class="emphasize2">5 puntos de ruta</span> debe ser cargada (cuando la <span class="emphasize2">zona proteger cultivo (headlane)</span> esta activada, la ruta tiene que tener por lo menos <span class="emphasize2">20 puntos de ruta</span>).</li>
+							<li>La ruta cargada no se ha generado.</li>
+							<li>La ruta cargada no ha sido combinada desde varias rutas, otros vehículos.</li>
+							<li>Una Esquina de incio se ha establecido.</li>
+							<li>Una dirección de inicio se ha establecido.</li>
+						</ol>
+					</li>
+					<p>Los puntos de espera en el inicio y el final se ajustarán automáticamente. Si desea añadir una descarga/rellenado en la ruta, la ruta de campo se debe generar primero. Después, agregue la descarga/rellenado a la ruta.</p>
+				</ol>
+			</div>
+			
+		</div> <!-- #manualTabs -->
+	</section>
+
+
+	<footer>
+		<span>&copy; Courseplay, 2013</span>
+		<nav id="footerNav">
+			<li><a href="https://github.com/Courseplay/courseplay">GitHub</a></li>
+			<li><a href="http://www.modhoster.de/projects/courseplay">Proyectos T.E.P.</a></li>
+			<li><a href="https://www.pivotaltracker.com/projects/675867#">Bug Tracker</a></li>
+			<li><a href="https://github.com/Courseplay/courseplay/issues?sort=created&amp;state=open">GitHub Issue Tracker</a></li>
+			<li><a href="http://courseplay.github.io/courseplay/de/manual/index.html">Version Alemana</a></li>
+			<li><a href="http://courseplay.github.io/courseplay/en/manual/index.html">Version Inglés</a></li>
+			<li><a href="http://courseplay.github.io/courseplay/index.html">Inicio</a></li>
+		</nav>
+	</footer>	
+</div> <!-- #container -->
+
+<script src="../../res_es/css/jquery.min.js"></script>
+<script>
+;(function ($) { $(document).ready(function () {
+$('body').removeClass('no-js').addClass('js');
+
+$('#driveModesNav').addClass('has-sub');
+CP = {};
+
+CP.manualNavFixed = $('#manualNav').clone().removeClass('default').appendTo('#manualTabs').addClass('scrolling').hide();
+CP.manualNav = $('#manualNav.default');
+
+CP.manualNavs = $('#manualNav.default, #manualNav.scrolling');
+
+//set li levels
+CP.manualNavs.find('> ul > li').addClass('level_1');
+CP.manualNavs.find('> ul > li > ul > li').addClass('level_2');
+
+CP.manualNavLinks = CP.manualNavs.find('a');
+
+CP.animationTime = 250;
+CP.manualSections = $('.manualSection').hide();
+
+$('#manualNav a, a.internalTab').on('click', function(evt) {
+	evt.preventDefault();
+	var target = $(this).attr('href');
+	CP.manualSections.hide();
+	
+	if (target.substr(1, 9) !== "driveMode" || target == "#driveModes") {
+		$(target).show();
+	} else {
+		$('#driveModes').show();
+		$('html, body').animate({
+			scrollTop: $(target).offset().top
+		}, CP.animationTime);
+	};
+	
+	if ($(this).hasClass('internalTab') && (target.substr(1, 9) !== "driveMode" || target == "#driveModes")) {
+		$('html, body').animate({
+			scrollTop: CP.manualNav.offset().top
+		}, CP.animationTime);
+	};
+	
+	
+	//nav: active item
+	CP.activeManualItem = target;
+	CP.manualNavLinks.removeClass('active');
+	CP.manualNavs.find('li.level_1, li.level_2').removeClass('active');
+
+	var curNavLink = CP.manualNavs.find('a[href="' + CP.activeManualItem + '"]');
+	var curNavLi = curNavLink.parents('li.level_1, li.level_2');
+
+	curNavLink.addClass('active');
+	curNavLi.addClass('active');
+});
+
+
+
+//scroll: manual nav fixed
+$(window).on('scroll', function(){
+	var pos = CP.manualNav.offset();
+	
+	if ( $(this).scrollTop() > pos.top ) {
+		CP.manualNavFixed.show();
+	} else if ( $(this).scrollTop() <= pos.top ) {
+		CP.manualNavFixed.hide();
+	};
+});
+
+}); })(jQuery); //END document.ready
+</script>
+</body>
+
+<!-- Mirrored from courseplay.github.io/courseplay/en/manual/index.html by HTTrack Website Copier/3.x [XR&CO'2013], Fri, 16 Aug 2013 22:25:41 GMT -->
+</html>
